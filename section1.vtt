@@ -1,0 +1,306 @@
+WEBVTT - Some title
+
+00:02.500 --> 00:09.200
+Welcome to the SC 20 Panel: TBBA 
+
+00:09.200 --> 00:18.300
+Task-Based Algorithms and Applications
+
+00:18.300 --> 00:22.100
+and before we start with the outline, I like to introduce myself. I'm Patrick Diehl 
+
+00:22.100 --> 00:24.400
+a research scientist at Louisiana State University
+
+00:24.400 --> 00:29.500
+and I work at the Center for Computation and Technology
+
+00:29.500 --> 00:33.900
+and I will be the moderator for today's panel and
+
+00:33.900 --> 00:39.100
+I will guide you through the panel. This is the panel's outline
+
+00:39.100 --> 00:42.700
+outline. We will have a quick introduction of our
+
+00:42.700 --> 00:47.400
+7 panelist. And after that we have a 5 minutes talk
+
+00:47.400 --> 00:50.700
+where we give an introduction of  asynchronous many
+
+00:50.700 --> 00:54.500
+tasks systems. So all of our audience is familiar
+
+00:54.500 --> 00:58.600
+with the basic fundamental terms of asynchronous many tasks
+
+00:58.600 --> 01:02.900
+systems. And since you have three people from three
+
+01:02.900 --> 01:07.000
+different AMTs here in our panel. We will have
+
+01:07.000 --> 01:10.900
+have introduction to Charm++. We will have
+
+01:10.900 --> 01:15.600
+to talk about Julia programming language and the last talk
+
+01:15.600 --> 01:18.700
+will be about C + + standard library for parallism
+
+01:18.700 --> 01:23.700
+and currency. And after we have some state-of-the-art
+
+01:23.700 --> 01:28.800
+introduction of the three AMTs we will have the panel's
+
+01:28.800 --> 01:32.500
+chosen questions. And after this we will have a live
+
+01:32.500 --> 01:36.300
+part of this virtual panel where we will have some questions
+
+01:36.300 --> 01:40.400
+and answers from the audience. And so all panelists
+
+01:40.400 --> 01:43.400
+will be happy to answer your additional questions,
+
+01:43.400 --> 01:48.100
+which we could not have during the panel. Okay.
+
+01:48.100 --> 01:51.500
+This is today's outline and now will go to
+
+01:51.500 --> 01:57.600
+the introduction of the panelist. And the first panelist
+
+01:57.600 --> 02:01.800
+we have today is Laxmikant V. Kale from University
+
+02:01.800 --> 02:07.200
+of Illinois. So let us welcome Laxmikant
+and please introduce
+
+02:07.200 --> 02:11.100
+yourself. I go by Sanjay, Sanjay Kale, University
+
+02:11.100 --> 02:23.200
+of Illinois and Charm works and I am working in parallel computing more than 35 years.
+
+02:23.200 --> 02:32.000
+I work on adaptive runtime systems, Charm++, and a variety of science and engineering applications. Ok, thank you for your introduction.
+
+02:35.300 --> 02:39.900
+Our second panelist is Irina P. Demeshko from Los
+
+02:39.900 --> 02:43.200
+Alamos National Laboratory. So let us welcome Irina.
+
+02:43.200 --> 02:49.300
+Please introduce yourself. Hi, everybody.
+
+02:49.300 --> 03:03.300
+I am Irina Demeshko, a computational scientist at Los Alamos National Laboratory.
+
+03:03.300 --> 03:08.700
+I am working in HPC for 16 years now. But the last 4 years with task-based runtime systems. That is all, thank you. Thanks for your introduction.
+
+03:12.700 --> 03:16.300
+So third panelist is Bryce Adelstein Lelbach
+
+03:16.300 --> 03:20.600
+from NVIDIA. So let us welcome Bryce and please
+
+03:20.600 --> 03:25.500
+introduce yourself. Hey everyone, so I work at NVIDIA
+
+03:25.500 --> 03:32.100
+where I work on Cuda and our HPC compiler stack and I
+
+03:32.100 --> 03:36.400
+lead our C++ core compute libraries team. I'm
+
+03:36.400 --> 03:39.600
+also the chair of the US standards committee for
+
+03:39.600 --> 03:42.300
+programming languages and the chair of the C++
+
+03:42.300 --> 03:48.200
+standard committees library evolution in
+
+03:48.200 --> 03:51.000
+the context of this panel before I was at Nvidia.
+
+03:51.000 --> 03:56.800
+I worked at LSU with Hartmut on the HPX parallel run
+
+03:56.800 --> 04:05.400
+time system. Okay. Thanks for your introduction. Panelist
+
+04:05.400 --> 04:08.000
+number four his Hartmut Kaiser from Louisiana
+
+04:08.000 --> 04:13.000
+State University. Let us welcome Hartmut, and please introduce
+
+04:13.000 --> 04:18.400
+yourself. My name is Hartmut Kaiser. I'm a research professor
+
+04:18.400 --> 04:22.500
+and scientist at the Centre of Computation and Technology
+
+04:22.500 --> 04:27.500
+at LSU. I'm working or I'm leading the
+
+04:27.500 --> 04:34.000
+Stellar research group and our main focus is the development
+
+04:34.000 --> 04:37.700
+of HPX as one of the AMTs we will talk about today
+
+04:37.700 --> 04:42.900
+and its application in scientific computing and machine
+
+04:42.900 --> 04:47.900
+learning problems. Okay. Thanks for your introduction.
+
+04:51.500 --> 04:55.000
+As panelist number five we have Zarah Khatami
+
+04:55.000 --> 04:58.700
+from Oracle. So let us welcome Zahra Sarah and Zahra,
+
+04:58.700 --> 05:02.500
+please introduce yourself. Thanks Patrick, this
+
+05:02.500 --> 05:06.700
+is Zahra. Hi everyone. I have been collaborating
+
+05:06.700 --> 05:11.900
+with HPX team and since PhD and the main project
+
+05:11.900 --> 05:14.400
+if I was involved was to  optimize the performance
+
+05:14.400 --> 05:28.700
+of parallel HPX algorithms  using ML techniques on top of dynamic and static information from algorithms. When I graduated
+
+05:28.700 --> 05:33.200
+my PhD, I join Oracle and I've been involved in designing
+
+05:33.200 --> 05:39.200
+and developing this year with assistance at Oracle.
+
+05:39.200 --> 05:43.600
+Thank you for your introduction. As a panelist number
+
+05:43.600 --> 05:47.300
+6. We have Keno Fisher from Julia Computing Inc.
+
+05:47.300 --> 05:50.000
+So let us welcome Keno, and please introduce
+
+05:50.000 --> 05:54.400
+yourself? Yeah, thanks Patrick. My name is Keno
+
+05:54.400 --> 05:57.900
+Fisher. I'm the co-founder and CEO at Julia Computing
+
+05:57.900 --> 06:01.100
+which is sort of the company behind the development
+
+06:01.100 --> 06:06.700
+of the Julia programming language. I've been working
+
+06:06.700 --> 06:11.700
+on the past eight years on Julia and my focus at Julia Computing
+
+06:11.700 --> 06:17.600
+is on the compiler stack and a lot of systems integration
+
+06:17.600 --> 06:28.700
+as well as targeting HPC applications. So I have been involved 
+
+06:28.700 --> 06:36.000
+in some of the larger use cases of Julia on the larger supercomputers as well as pushing our technology in those directions. I will tell you something about that injust a few minutes.  Thank you for
+
+06:36.000 --> 06:42.600
+your introduction. And our 7th panelist is Alice
+
+06:42.600 --> 06:45.700
+Koniges from University of Hawaii. So let us welcome
+
+06:45.700 --> 06:50.200
+Alice and Alice, please introduce yourself. Hi,
+
+06:50.200 --> 06:53.900
+I'm Alice Koniges. And in this context of this panel
+
+06:53.900 --> 06:56.600
+I serve on the OpenMP Architectural Review Board
+
+06:56.600 --> 07:00.000
+for the University of Hawaii. And I also been doing
+
+07:00.000 --> 07:02.700
+that represent the interests of the Maui high performance
+
+07:02.700 --> 07:05.700
+Computing Center. And generally the US Department
+
+07:05.700 --> 07:09.200
+of defense's HPC modernization program. And since
+
+07:09.200 --> 07:13.100
+OpenMP  isn't directly mentioned in some of the
+
+07:13.100 --> 07:16.700
+following talks. I just wanted to say a few things at the
+
+07:16.700 --> 07:19.500
+general mission of the Architectural Review Board
+
+07:19.500 --> 07:22.500
+for openmp is to further and maintain the standard
+
+07:22.500 --> 07:25.700
+and OpenMP was originally introduced as a work
+
+07:25.700 --> 07:30.400
+sharing model. However starting as early as 2008
+
+07:30.400 --> 07:34.700
+tasking was introduced into the standard and so openmp
+
+07:34.700 --> 07:38.500
+supports not our only standard workshare models,
+
+07:38.500 --> 07:41.800
+but also tasking and most of the available context
+
+07:41.800 --> 07:46.800
+the major focus of openmp. However is on the shared
+
+07:46.800 --> 07:51.800
+memory nodes rather than working across the entire cluster and
+
+07:51.800 --> 07:54.500
+there's quite a difference is there but there many
+
+07:54.500 --> 07:57.500
+possibilities within the tasking models of openmp.
+
+07:57.500 --> 08:00.700
+You can plan task work sharing and so on and you have
+
+08:00.700 --> 08:03.800
+all the most of the bells and whistles of all tasking models.
+
+08:03.800 --> 08:08.000
+Thank you. Okay. Thanks for the introduction.
+

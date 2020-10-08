@@ -1,0 +1,1031 @@
+WEBVTT - Some title
+
+00:05.800 --> 00:10.000
+Okay. So let us start with our first truck by Bryce who
+
+00:10.000 --> 00:12.500
+will give us an introduction to asynchronous many
+
+00:12.500 --> 00:20.400
+task system. Hi, everybody. So the asyncronous many task model refers
+
+00:20.400 --> 00:26.200
+to this Paradigm that's used by a number of sort of
+
+00:26.200 --> 00:32.800
+these more recent parallel programming frameworks
+
+00:32.800 --> 00:37.500
+on a lot of which popped up around the 2010s or so.
+
+00:37.500 --> 00:44.200
+In this model that the task is the basic atom of work
+
+00:44.200 --> 00:47.700
+and I'm going to define task here is just the notion
+
+00:47.700 --> 00:51.700
+of a function call which a run time system decides
+
+00:51.700 --> 00:57.600
+when and where to execute in a sentence many tasks
+
+00:57.600 --> 01:00.400
+systems passed are almost always oversubscribed
+
+01:00.400 --> 01:03.800
+which means that there are many more tasks as there
+
+01:03.800 --> 01:10.400
+are processing units and the tasks are usually variable
+
+01:10.400 --> 01:14.900
+and execution time. So tasks could be as small as something
+
+01:14.900 --> 01:17.300
+as as single instruction running on a single
+
+01:17.300 --> 01:20.300
+cycle to something that runs for seconds or minutes
+
+01:20.300 --> 01:24.800
+or even hours and not only are they variable
+
+01:24.800 --> 01:31.300
+but you might have a application that has many different
+
+01:31.300 --> 01:34.400
+granularities of tasks running at the same time.
+
+01:34.400 --> 01:37.400
+So there's a typically a load balancing problem
+
+01:37.400 --> 01:41.900
+that you have to deal with and these tasks they form
+
+01:41.900 --> 01:44.600
+dependency graph among themselves either
+
+01:44.600 --> 01:48.600
+implicitly or explicitly and that dendency graph 
+
+01:48.600 --> 01:53.300
+informs the scheduling decisions the run time system makes.
+
+01:53.300 --> 02:00.600
+For AMTs that address multi-node parallelism.
+
+02:00.600 --> 02:05.000
+Typically tasks are executed in some sort of global
+
+02:05.000 --> 02:09.700
+object space that spans multiple nodes. One of the
+
+02:09.700 --> 02:13.200
+one of the interesting properties of AMTs are the
+
+02:13.200 --> 02:17.500
+ones that deal with distributed computing as well
+
+02:17.500 --> 02:23.700
+is that they offer a unified approach to both thread
+
+02:23.700 --> 02:28.900
+and node level parallism. AMTs tend to be very well
+
+02:28.900 --> 02:34.900
+suited to applications that need dynamic load balancing
+
+02:34.900 --> 02:39.400
+because you don't know at the start of the application
+
+02:39.400 --> 02:43.300
+where exactly the work will be needed for example
+
+02:43.300 --> 02:49.700
+application to do adaptive mesh refinement. And
+
+02:49.700 --> 02:57.800
+that's pretty much it. Okay. Thanks for your introduction
+
+02:57.800 --> 03:01.200
+to the asyncronous many task model. Let us start with
+
+03:01.200 --> 03:06.800
+our first state-of-the-art talk and this will be by Sanjay
+
+03:06.800 --> 03:13.400
+about the Charm++ runtime system. Thanks Patrick,
+
+03:13.400 --> 03:17.800
+I will briefly introduce/describe what Charm++
+
+03:17.800 --> 03:21.500
+is and then a its capabilities and the little bit
+
+03:21.500 --> 03:26.500
+of its task underpinnings and then current results.
+
+03:26.500 --> 03:36.500
+A computation specified by a Charm++ program is a selection of globally visible objects and they
+
+03:36.500 --> 03:39.100
+connect with each other communicate with each other
+
+03:39.100 --> 03:41.800
+through asynchronous method invocations. That
+
+03:41.800 --> 03:43.800
+means when you send a method invocation to another
+
+03:43.800 --> 03:47.300
+object, you don't wait for the return value of the
+
+03:47.300 --> 03:51.000
+processors are there. Of course, the programmers
+
+03:51.000 --> 03:53.600
+mind is not on processors, but they exist and run
+
+03:53.600 --> 03:56.200
+time system is responsible for assigning these
+
+03:56.200 --> 04:00.900
+objects to processors. So and the programmer doesn't
+
+04:00.900 --> 04:03.300
+know we're at an object live. Doesn't need to know
+
+04:03.300 --> 04:06.900
+each processor has many objects and Method invocation
+
+04:06.900 --> 04:09.900
+waiting for it. So there's a user space scheduler
+
+04:09.900 --> 04:15.200
+to decide what runs next. As an example, look at
+
+04:15.200 --> 04:18.400
+this purple object on the top Left if it wants to invoke
+
+04:18.400 --> 04:21.000
+a method in this yellow object on bottom right
+
+04:21.000 --> 04:23.600
+It doesn't know where is located body can handle
+
+04:23.600 --> 04:26.500
+the method invocation to the runtime system which
+
+04:26.500 --> 04:29.200
+figures out through its distributed location manager
+
+04:29.200 --> 04:32.100
+where that object it thinks is currently located
+
+04:32.100 --> 04:34.800
+in the scheduler's queue there and eventually is picked up by
+
+04:34.800 --> 04:38.100
+the scheduler method is invoked and that invloves
+
+04:38.100 --> 04:41.100
+more method invocations for other objects. So
+
+04:41.100 --> 04:44.600
+that's the essential execution model. The runtime system
+
+04:44.600 --> 04:48.200
+of course knows who's talking to whom which object
+
+04:48.200 --> 04:50.500
+is heavy and which object is light and which processor
+
+04:50.500 --> 04:53.600
+is over and underloaded and so periodically can
+
+04:53.600 --> 04:59.200
+move these objects around to balance load. So
+
+04:59.200 --> 05:01.600
+underneath. I thought I should mention a little
+
+05:01.600 --> 05:06.000
+bit of under the hood underpinnings here. The 
+
+05:06.000 --> 05:11.000
+layer under Charm++ is called Converse and it provides
+
+05:11.000 --> 05:14.600
+scheduling and he I show one node and two cores
+
+05:14.600 --> 05:17.600
+every core is running a scheduler and the entities
+
+05:17.600 --> 05:21.400
+that it's schedules are user-level threads or active
+
+05:21.400 --> 05:24.300
+messages on a special cases. There is gross method
+
+05:24.300 --> 05:28.600
+invocation of these Charm++ objects. Te Converse
+
+05:28.600 --> 05:30.800
+system, of course because you have control over
+
+05:30.800 --> 05:33.800
+individual schedule a flexible schedule such as
+
+05:33.800 --> 05:38.400
+OpenMP tasks and very carefully controlled a type
+
+05:38.400 --> 05:42.500
+of sharing and so on. Converse is designed in 1996
+
+05:42.500 --> 05:45.800
+is still under using in Charm++. If you want to look on
+
+05:45.800 --> 05:48.500
+the modern successor to it then I would point to
+
+05:48.500 --> 05:54.300
+Autobots. So Charm++ based on all these runtime tasks
+
+05:54.300 --> 05:56.100
+that we talked about combined with introspection
+
+05:56.100 --> 06:03.400
+and so on. It provides dynamic load balancing of course
+
+06:03.400 --> 06:05.900
+and fault tolerance. You can change the number of nodes which is important for
+
+06:05.900 --> 06:08.900
+cloud computing. It supports energy optimization and so on.
+
+06:08.900 --> 06:14.800
+Charm++ is just one of the multiple programming
+
+06:14.800 --> 06:17.800
+systems available on top of being this family of
+
+06:17.800 --> 06:21.300
+programming models and CharmMPI which is implemented
+
+06:21.300 --> 06:24.500
+on top of Charm++ to support the MPI programming
+
+06:24.500 --> 06:28.800
+model fully. And there is a Python implementation
+
+06:28.800 --> 06:30.900
+and so on and so forth.
+
+06:30.900 --> 06:34.400
+There are over a dozen applications that routinely
+
+06:34.400 --> 06:38.600
+run on supercomputers. The probably the most familiar
+
+06:38.600 --> 06:44.900
+most known is NAMD for biophysics. And there are
+
+06:44.900 --> 06:46.500
+interesting application papers. I just thought I would mention
+
+06:46.500 --> 06:49.400
+a few papers if people are interested to follow up
+
+06:49.400 --> 06:52.500
+on topics that might be interesting along with mini
+
+06:52.500 --> 06:55.600
+apps and I will give you a reference at the end where
+
+06:55.600 --> 07:01.800
+to look up please. So a little bit of summary of
+
+07:01.800 --> 07:05.500
+recent last year's result. We have quite a bit
+
+07:05.500 --> 07:10.100
+of work in our group on energy related going back
+
+07:10.100 --> 07:14.100
+to maybe eight years ago using this adaptive run
+
+07:14.100 --> 07:17.300
+time to control energy and temperature and power
+
+07:17.300 --> 07:20.800
+and so on. One of the recent things that we did was
+
+07:20.800 --> 07:24.100
+automatically turning cores on and off. So users
+
+07:24.100 --> 07:28.200
+don't think I would use four or five processors.
+
+07:28.200 --> 07:31.800
+That's too many and I get into memory bandwidth
+
+07:31.800 --> 07:34.300
+issues are used. All that can be automated
+
+07:34.300 --> 07:38.900
+to a run time selection mechanism by the feature
+
+07:38.900 --> 07:44.200
+that one of my student is working on. The other advances
+
+07:44.200 --> 07:49.800
+at CharmWorks under a
+
+07:49.800 --> 07:53.500
+Department of energy grant. We have made a adaptive
+
+07:53.500 --> 07:57.800
+MPI much more advanced. It's much more standard
+
+07:57.800 --> 08:01.600
+compliant, it has more automatic. Running MPI codes
+
+08:01.600 --> 08:05.500
+and so without making much changed your code at all
+
+08:05.500 --> 08:08.700
+and did a lot of performance improvements that have
+
+08:08.700 --> 08:13.600
+gotten in productivity. Finally I like to talk
+
+08:13.600 --> 08:17.200
+just a bit about communication optimizations as
+
+08:17.200 --> 08:20.300
+you know, and I think that the point we will
+
+08:20.300 --> 08:23.100
+come back trom time to time. Is that
+
+08:23.100 --> 08:25.600
+communication or decomposition is actually very
+
+08:25.600 --> 08:28.800
+nice, but communication because injection happens
+
+08:28.800 --> 08:31.700
+over time multiple times in a Time step you will be
+
+08:31.700 --> 08:33.800
+different objects would be injecting messages
+
+08:33.800 --> 08:36.900
+into the network, which is a good because your network
+
+08:36.900 --> 08:40.500
+has been more evenly utilized. This is fine. But
+
+08:40.500 --> 08:43.700
+more recent thing that we have work done is how to
+
+08:43.700 --> 08:47.500
+combine that with this idea of spreading Loops.
+
+08:47.500 --> 08:52.100
+So first in the context of the multi core programs
+
+08:52.100 --> 08:54.800
+the question becomes do you want
+
+08:54.800 --> 08:57.300
+that each core has its own set of objects,
+
+08:57.300 --> 08:59.700
+or do you want to spread the loop or a subset of them?
+
+08:59.700 --> 09:02.300
+And so they the choice between over decomposition
+
+09:02.300 --> 09:07.000
+along the x-axis and and the spreading of loops on
+
+09:07.000 --> 09:10.400
+all cores or a subset of cores. On the other axis
+
+09:10.400 --> 09:13.400
+and to exploring this is another thing that we have
+
+09:13.400 --> 09:17.300
+recently done with Michael Robson thesis and similar
+
+09:17.300 --> 09:21.000
+efforts are on for GPUs use as well. If you want to
+
+09:21.000 --> 09:23.900
+learn more about it that are the links here one for
+
+09:23.900 --> 09:27.100
+the CharmWorks and one for the research group. Thank
+
+09:27.100 --> 09:32.100
+you. Thank you for introducing Charm++. Let us go
+
+09:32.100 --> 09:35.200
+for the second state-of-the-art to talk about see
+
+09:35.200 --> 09:39.000
+Julia programming language given by Keno Fisher.
+
+09:40.600 --> 09:43.600
+Yeah, thanks. Patrick's. I dive right in and I have about
+
+09:43.600 --> 09:47.300
+three marketing slides up top for anybody who hasn't
+
+09:47.300 --> 09:50.100
+heard about Julia by this point. Hopefully not
+
+09:50.100 --> 09:52.300
+too many of you. But Juli is a relatively new programming
+
+09:52.300 --> 09:57.400
+language. First released around 2012 and 1.0 was released 2 years ago
+
+09:57.400 --> 10:20.300
+in 2018. More than two million downloads and 4000 packages. Here are some of the companies using it and some of the universities teaching it. Here are some books. Let us talk about parallism.
+
+10:20.300 --> 10:24.300
+I want to start with the use case and the application that has driven a lot of our design requirements  
+
+10:24.300 --> 10:28.500
+testing system as well as informed a lot of the challenges
+
+10:28.500 --> 10:32.300
+that we're trying to address and that's the Celeste
+
+10:32.300 --> 10:40.900
+problem that we did three years ago. First
+
+10:40.900 --> 10:44.600
+peta-scale Julia application which was an astronomical
+
+10:44.600 --> 10:51.400
+image analysis application on 1.3 million threads
+
+10:51.400 --> 10:54.400
+and a very large scale data analysis
+
+10:54.400 --> 11:07.100
+problem, 60 terabytes of data. And what made this problem so interesting, was a regular parallism on all levels of the abstraction stack.
+
+11:07.100 --> 11:11.200
+So, it had a regular workload schedule in
+
+11:11.200 --> 11:19.200
+each region of the sky has different numbers of stars
+
+11:19.200 --> 11:22.300
+and the workload was proportional to the number of stars.
+
+11:22.300 --> 11:33.600
+And then, you know different sizes of the workload
+
+11:33.600 --> 11:37.100
+was highly highly irregular and only stay at the
+
+11:37.100 --> 11:43.200
+SIMD level of the individual thread. This is the
+
+11:43.200 --> 11:46.700
+kind of application were a task based sytem is really
+
+11:46.700 --> 11:49.100
+really useful. Because each of these individual work
+
+11:49.100 --> 11:54.100
+items can be expressed as a task. Given the topic of this panel it is
+
+11:54.100 --> 11:59.200
+no surprise that the task is the fundamental
+
+11:59.200 --> 12:14.100
+schedule unit. A very simple and trivial Fobonacci implementation which is notsupposed to be sufficient. 
+
+12:14.100 --> 12:19.500
+So we just used tasks for both concurrency and parallelism.
+
+12:19.500 --> 12:32.400
+For concurrency in particular it is integrated with a performant IO scheduler. That do not matter in the HPC context, but for applications running in the cloud infrastrucuture.
+
+12:32.400 --> 12:36.400
+Were data fetches are some hhtp requests to some
+
+12:36.400 --> 12:46.200
+external service or a database schedule. The tasks are supposed
+
+12:46.200 --> 12:55.200
+to have a very low and such that you can just move them.
+
+12:55.200 --> 13:13.800
+So how to reschedule this fast while we have a scheduler
+
+13:13.800 --> 13:19.000
+which is very useful one problem that you sometimes
+
+13:19.000 --> 13:42.000
+systems or regular or something like that. 
+
+13:42.000 --> 13:45.300
+system could help so by addressing a scheduling
+
+13:45.300 --> 13:49.500
+a model to sort of schedule things that extra memory
+
+13:49.500 --> 13:55.500
+locations that flows together. We hopefully get
+
+13:55.500 --> 14:03.200
+the best of both worlds from a star system as well
+
+14:03.200 --> 14:06.600
+as concurrency and parallelism that you would expect
+
+14:06.600 --> 14:08.700
+from a task a system which is really important to
+
+14:08.700 --> 14:11.400
+us as soon as language. Authors does one thing that
+
+14:11.400 --> 14:14.700
+you let us all about is composability and only if
+
+14:14.700 --> 14:18.400
+all of our library authors can express parallelism
+
+14:18.400 --> 14:20.400
+concurrency opportunities by the existing the
+
+14:20.400 --> 14:23.000
+libraries and not have to worry about the of us subscribing
+
+14:23.000 --> 14:30.200
+the system and chilling performance and I just the
+
+14:30.200 --> 14:33.600
+work of Houston people get my college in Jackson.
+
+14:41.100 --> 14:55.500
+Now working on Moto we have a default for you, which
+
+14:55.500 --> 15:00.000
+is so that extends the task dependencies to the global
+
+15:00.000 --> 15:03.400
+level is called dagger and think of it like that on
+
+15:03.400 --> 15:08.700
+the schedule. I can has it been a schedule at work
+
+15:08.700 --> 15:31.000
+if you know more about your scheduling process,
+
+15:31.000 --> 15:42.000
+so you have a choice so you can just add them. Lastly
+
+15:42.000 --> 15:48.100
+a word on active work. So wondering active reading
+
+15:48.100 --> 15:54.100
+this more with a compiler optimization sancocho
+
+15:54.100 --> 16:02.300
+optimization say I feel like staying in darian's
+
+16:02.300 --> 16:08.800
+operations out of tasks to avoid as well as potentially
+
+16:08.800 --> 16:12.100
+adjusting scheduling hits based on information
+
+16:12.100 --> 16:18.500
+that may be available in the unification of the century
+
+16:18.500 --> 16:23.000
+models of Julia has a very mature native generation
+
+16:23.000 --> 16:32.200
+capabilities. We expose the same kind of like to
+
+16:32.200 --> 16:34.800
+unify the attractions of a task and the extraction
+
+16:34.800 --> 16:43.400
+of a plane into directions. So 1 But you would like
+
+16:43.400 --> 16:45.900
+to take the same key programming model actually
+
+16:45.900 --> 16:54.300
+raise it a bit such that if you have a parallel to exchange
+
+16:54.300 --> 16:56.700
+some data, you could express that in the same to you
+
+16:56.700 --> 16:59.000
+like programming bottle. Even if your fundamental
+
+16:59.000 --> 17:07.200
+unit is not a CPU thread, but say a note get so Julia
+
+17:07.200 --> 17:10.300
+likes to do things like get specialized code based
+
+17:10.300 --> 17:23.000
+on ovulation be able to remove that comes out of the
+
+17:23.000 --> 17:34.400
+gym and move it around. Thanks for the talk. Does
+
+17:34.400 --> 17:39.700
+he like to talk to me about zhp X Red X system given
+
+17:39.700 --> 17:44.400
+by advertising? I get bad break. I love her body.
+
+17:44.400 --> 17:49.000
+What I would like to do is to give you a quick introduction
+
+17:49.000 --> 18:03.300
+into hbx. I apologize the general analysis of the
+
+18:03.300 --> 18:05.400
+problems. We are facing and parole application
+
+18:05.400 --> 18:11.000
+today. If you look at the landscape of the tools of
+
+18:11.000 --> 18:16.200
+the application developers in Boca Raton, you usually
+
+18:16.200 --> 18:19.500
+get you just see that there are many tools available.
+
+18:19.500 --> 18:23.900
+But only few tools. I actually being designed to
+
+18:23.900 --> 18:27.900
+work together. So you can somehow I have that pile
+
+18:27.900 --> 18:30.800
+of blocks you have to put together as a programmer
+
+18:30.800 --> 18:33.500
+and have to Brookfield brain around. How'd you come
+
+18:33.500 --> 18:36.200
+by and get the from paradigms exposed by the different
+
+18:36.200 --> 18:41.700
+program in Mobile strike and he in turn signal application.
+
+18:42.300 --> 18:47.100
+Still the problem is kind of depicted in this image
+
+18:47.100 --> 18:51.800
+of what you see is utilization, of course of a typical
+
+18:51.800 --> 18:55.400
+power lines application where each horizontal
+
+18:55.400 --> 18:59.600
+line represents YouTube version of 1 cor and the
+
+18:59.600 --> 19:03.300
+greenish highlighted regions are the ones when
+
+19:03.300 --> 19:06.900
+the cores actually busy and the whitish gaps in between
+
+19:06.900 --> 19:13.200
+just show when the car is idle. What would be seen
+
+19:13.200 --> 19:16.000
+these applications? Very awesome is that the courts
+
+19:16.000 --> 19:19.600
+are utilized nicely paralyzed but you have these
+
+19:19.600 --> 19:23.600
+utilization gaps in between and those are caused
+
+19:23.600 --> 19:31.900
+by the way of the programming models. Suggest we
+
+19:31.900 --> 19:39.700
+use them General. I believe that there is some models
+
+19:39.700 --> 19:45.300
+we have to do it today. Mostly of my pmf expose insufficient
+
+19:45.300 --> 19:50.700
+parallelism by Design. They make it possible for
+
+19:50.700 --> 19:54.700
+you to use more sophisticated means of getting into
+
+19:54.700 --> 19:58.400
+the parallelism by overlapping computation communication
+
+19:58.400 --> 20:03.600
+or by introducing message and things like that.
+
+20:03.600 --> 20:09.600
+But the problem that has all ways to invest additional
+
+20:09.600 --> 20:12.400
+F-word in order to make those things available to
+
+20:12.400 --> 20:17.800
+the application example is the invoice Berry at
+
+20:17.800 --> 20:20.500
+the end of the Perla for Loop in the end of my pee which
+
+20:20.500 --> 20:24.100
+causes the synchronization across course or the
+
+20:24.100 --> 20:30.200
+global communication barrier. Show me as I said,
+
+20:30.200 --> 20:33.400
+you can overcome that but you have to invest additional
+
+20:33.400 --> 20:38.200
+effort to a cheetah. We tend to always somewhere
+
+20:38.200 --> 20:42.100
+nice things more things than are required by the
+
+20:42.100 --> 20:46.600
+algorithm example for that is that lock stepping
+
+20:46.600 --> 20:51.100
+between notes that causes for the application online
+
+20:51.100 --> 20:57.200
+for the Rings to always be on the same times to get
+
+20:57.200 --> 21:00.100
+very messy. When you start trying to decouple the
+
+21:00.100 --> 21:03.200
+time stepping on the different notes in the simulation
+
+21:03.200 --> 21:08.100
+Swanson's I also believe that there's insufficient
+
+21:08.100 --> 21:10.700
+coordination between the unloading of note paralyzation
+
+21:10.700 --> 21:17.300
+a techniques we have available to us just to make
+
+21:17.300 --> 21:25.100
+us down release talk to each other. Notable good
+
+21:25.100 --> 21:29.500
+example is in the integration of empty. I was envious
+
+21:29.500 --> 21:33.400
+and we link Technologies for instance, but I would
+
+21:33.400 --> 21:38.200
+like to see a much deeper integration of Judah and
+
+21:38.200 --> 21:41.600
+the other Technologies in the future mostly to avoid
+
+21:41.600 --> 21:44.500
+that. The Bro, has to deal with sting probing models
+
+21:44.500 --> 21:50.400
+for different types of problem. I'm all that set
+
+21:50.400 --> 21:54.000
+of we have taken these problems too hard and have
+
+21:54.000 --> 21:58.600
+kind of designed HB X from first principles in the
+
+21:58.600 --> 22:02.400
+way that it is an API to the user that doesn't require
+
+22:02.400 --> 22:07.000
+additional effort to overcome these problems.
+
+22:07.000 --> 22:13.100
+I was listing if you use the HP xapi, which is by the
+
+22:13.100 --> 22:16.000
+way of a very much is a Blow Pop sonnets from forming.
+
+22:16.000 --> 22:20.000
+So if you know c-plus plus 11 plus 40 in these broken
+
+22:20.000 --> 22:25.300
+wings. Then you can go ahead. Music directing hbx
+
+22:25.300 --> 22:31.300
+was out running. So if you use that API that expensive
+
+22:31.300 --> 22:39.300
+but that's all these nice features from your application,
+
+22:39.300 --> 22:42.100
+like overlapping communication with computation
+
+22:42.100 --> 22:48.700
+active messages latency hiding moving work today
+
+22:48.700 --> 22:57.700
+tomorrow and so on and so on. Hbx about exposing interface
+
+22:57.700 --> 23:02.800
+API, which is stomachs oriented and the important
+
+23:02.800 --> 23:07.300
+thing here this context and semantics for local
+
+23:07.300 --> 23:12.900
+remote operation. Enables a a synchronous C plus
+
+23:12.900 --> 23:20.200
+plus programming model which techniques and if
+
+23:20.200 --> 23:23.100
+you are interested in those things, I can refer you
+
+23:23.100 --> 23:27.200
+to other folks. I have given at cppcon and other conferences.
+
+23:27.200 --> 23:35.000
+Please go there to get more information. It allows
+
+23:35.000 --> 23:38.300
+to intrinsically height of the intrinsic hiding
+
+23:38.300 --> 23:41.900
+of legacies and automatic load balancing on the
+
+23:41.900 --> 23:45.500
+note in the crossroads. Just to give you an example
+
+23:45.500 --> 23:48.500
+of how that API looks like. It's on the left how long
+
+23:48.500 --> 23:52.000
+you have the standard apis like since Reds and stick
+
+23:52.000 --> 23:56.400
+new directions that they sing and on the right, You
+
+23:56.400 --> 23:58.800
+have the corresponding API which has the same name
+
+23:58.800 --> 24:02.900
+and not surprisingly absolutely the same semantics
+
+24:02.900 --> 24:07.600
+as of the Senate versions except that we have extended
+
+24:07.600 --> 24:11.200
+them to work in the distributor contacts. So you
+
+24:11.200 --> 24:15.000
+can find a function locally send it over the wire
+
+24:15.000 --> 24:20.000
+and then we'll get on the other end. I also notable
+
+24:20.000 --> 24:24.100
+that it be exhausted all the only for the only library
+
+24:24.100 --> 24:27.400
+that gives you the full set of pro algorithms that
+
+24:27.400 --> 24:33.900
+have been except for 17. So not even that comes with
+
+24:33.900 --> 24:38.000
+a library that comes with all of them. If you want
+
+24:38.000 --> 24:43.200
+to play around with the Nexus one of the ways to do
+
+24:43.200 --> 24:48.400
+that a quick example, and I want to introduce you
+
+24:48.400 --> 24:53.300
+to a astrophysics application which is kind of lunch
+
+24:53.300 --> 24:59.600
+application for hbx. It's a multi-modal multiscale
+
+24:59.600 --> 25:05.900
+accepted mesh refinement. Vacation that is used
+
+25:05.900 --> 25:09.700
+to model. The measure of white dwarfs are we have
+
+25:09.700 --> 25:13.700
+run this application very successfully on several
+
+25:13.700 --> 25:18.000
+big machines. We have run it. On the phone system
+
+25:18.000 --> 25:22.400
+wrong on Corey couple of years back last year. We
+
+25:22.400 --> 25:26.500
+have done something. Runs on it stains the largest
+
+25:26.500 --> 25:33.300
+machine in Europe 5500 notes and over all these simulations
+
+25:33.300 --> 25:38.200
+have scheduled several billions of threats of Walla
+
+25:38.200 --> 25:44.100
+Walla running what you see here on this graph is essentially
+
+25:44.100 --> 25:50.300
+the result of a scaling analysis of this astrophysics
+
+25:50.300 --> 25:53.300
+application, which is called off the tiger. Let's
+
+25:53.300 --> 25:59.400
+focus on the blue lines only you see for Ralphs one
+
+25:59.400 --> 26:06.500
+for each system science. And as you can see the scaling
+
+26:06.500 --> 26:10.000
+we achieved on the phone this application was in
+
+26:10.000 --> 26:13.800
+the range of about 78% weed scaling efficiency from
+
+26:13.800 --> 26:21.100
+one notch two, Thousand Oaks. About 68% scaling
+
+26:21.100 --> 26:26.700
+efficiency for instance from 500 notes to 2K notes.
+
+26:26.700 --> 26:31.800
+So bye. Bye this application by using the techniques
+
+26:31.800 --> 26:39.300
+hbx allows you to use. So what is if you use the techniques
+
+26:39.300 --> 26:42.500
+I described you end up with squeezing your mobile
+
+26:42.500 --> 26:45.700
+execution and very nicely because the utilization
+
+26:45.700 --> 26:49.700
+of the course goes up significantly and what we actually
+
+26:49.700 --> 26:53.500
+hope that this uniform API, and we're working closely
+
+26:53.500 --> 26:56.400
+was it's a musician, She always try to contribute
+
+26:56.400 --> 27:00.900
+to the standardization committee that we finally
+
+27:00.900 --> 27:04.400
+end up with a uniform if you hide that can be used for
+
+27:04.400 --> 27:07.200
+all kind. All of them's on all levels on the system
+
+27:07.200 --> 27:12.700
+and is made available to the program on to write applications
+
+27:12.700 --> 27:16.800
+appeal from the sand from the laptop to open the Raspberry
+
+27:16.800 --> 27:26.500
+Pi. So that the thank you so much. Thank you, and we
+
+27:26.500 --> 27:30.200
+will put the electric lights you have seen on the
+
+27:30.200 --> 27:31.200
+panels webpage.
+
