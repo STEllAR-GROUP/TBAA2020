@@ -1,0 +1,2219 @@
+WEBVTT - Some title
+
+00:00.400 --> 00:06.400
+Okay. So let us. Receive first panel question what
+
+00:06.400 --> 00:10.900
+class of education is an AMT Paradigm the best solution
+
+00:10.900 --> 00:20.000
+for achieving these scalable execution? I can't
+
+00:20.000 --> 00:23.400
+miss start discussion. So proud of my experience
+
+00:23.400 --> 00:27.400
+for the application. I mean the same he's going to
+
+00:27.400 --> 00:31.800
+be pretty useful especially when they have irregular
+
+00:31.800 --> 00:38.600
+dependency 15 test and you know, if we kind of sea
+
+00:38.600 --> 00:43.500
+divers Behavior befriends computational lock
+
+00:43.500 --> 00:46.400
+and application and you can now so I can tap handle
+
+00:46.400 --> 00:52.200
+it easily by developers. So AMT is pretty flexible
+
+00:52.200 --> 00:57.800
+to handle this dependency graph to capture all of
+
+00:57.800 --> 01:02.500
+the dependency then I'mma catch one time. So we have
+
+01:02.500 --> 01:06.100
+location of a large number of tasks and it's a special
+
+01:06.100 --> 01:08.400
+at a regular dependency. I guess kind of the best
+
+01:08.400 --> 01:16.500
+choice. I think maybe in contrast to a lot of does
+
+01:16.500 --> 01:20.400
+it depend on the the data dependencies. Do you know
+
+01:20.400 --> 01:23.100
+if you launch the task and whether or not the data
+
+01:23.100 --> 01:27.200
+goes away and you need it to know where it is in, be
+
+01:27.200 --> 01:31.200
+sure to dress as a sort of a model that can be very difficult
+
+01:31.200 --> 01:34.300
+to do and it would depend on the size of your tasks
+
+01:34.300 --> 01:40.900
+and what you're doing with the application. I think
+
+01:40.900 --> 01:45.600
+I think a lot of multiphysics applications where
+
+01:45.600 --> 01:53.000
+you've got a multiple different physical systems
+
+01:53.000 --> 02:01.000
+that you need to simulate and the pin Pinterest simultaneously
+
+02:01.000 --> 02:06.200
+and the computation for each is going to be very different.
+
+02:06.200 --> 02:11.900
+For example, a lot of climate simulation codes,
+
+02:11.900 --> 02:13.600
+you know, you have an atmosphere component of the
+
+02:13.600 --> 02:15.800
+code, you'll have an ocean component of the codes
+
+02:15.800 --> 02:18.800
+all of the land under the code job cic love potion
+
+02:18.800 --> 02:23.900
+ice location. You've got a lot of irregularity not
+
+02:23.900 --> 02:27.900
+necessarily in each one of those individual components
+
+02:27.900 --> 02:31.800
+the fact that you are trying to stimulate all those
+
+02:31.800 --> 02:35.100
+different components simultaneously and so to
+
+02:35.100 --> 02:40.300
+be able to do that it's scales and then like me. They're
+
+02:40.300 --> 02:46.000
+useful. An enemy of course, if it's a grid based calculation,
+
+02:46.000 --> 02:48.100
+then you may be doing a lot of those operations on
+
+02:48.100 --> 02:52.200
+the grid and that's where you run into problems with
+
+02:52.200 --> 02:56.700
+the aim T. But yeah, so but it going going back to that
+
+02:56.700 --> 03:00.800
+climate example, most of the individual components.
+
+03:00.800 --> 03:05.900
+There are lots of climate application are going
+
+03:05.900 --> 03:08.100
+to be salt on a grid but it might be that use a different
+
+03:08.100 --> 03:12.100
+type of grid for the different models and some of
+
+03:12.100 --> 03:19.600
+those grids are adaptive and some aren't Histories
+
+03:19.600 --> 03:24.500
+to the fact that it's not necessarily a work scheduling
+
+03:24.500 --> 03:28.500
+question, even in war clothes that you have regular
+
+03:28.500 --> 03:33.500
+cribs. You can use at a spray bottle. But where are
+
+03:33.500 --> 03:36.000
+you do have the regular you might want to in stores?
+
+03:36.000 --> 03:40.300
+Statically that things on Jason break up poems death
+
+03:40.300 --> 03:43.800
+toll schedule to recover the performance if you
+
+03:43.800 --> 03:46.100
+would get from a static scheduler while still being
+
+03:46.100 --> 03:56.200
+able to use I wanted to kind of second that are modified
+
+03:56.200 --> 04:00.200
+a little bit that you need scheduling is where you
+
+04:00.200 --> 04:03.400
+need in these are useful right scheduling flexibility
+
+04:03.400 --> 04:08.000
+and indeed you messed up. I meant salt when measurements
+
+04:08.000 --> 04:10.600
+are doing different behavior in different phases
+
+04:10.600 --> 04:15.900
+like in one of our simulations day. This is like water
+
+04:15.900 --> 04:19.200
+flooding so they're dry elements and elements in
+
+04:19.200 --> 04:23.700
+Swan. Those are all things where we definitely shines
+
+04:23.700 --> 04:28.100
+all these empty systems. However, a regular applications
+
+04:28.100 --> 04:34.700
+to the machine. Is regular so so there is a processors
+
+04:34.700 --> 04:39.800
+coming from temperature and power variations to
+
+04:39.800 --> 04:42.600
+handle those. Also we need the same scheduling flexibility
+
+04:42.600 --> 04:47.100
+that that empties provide. Yeah, right. I agree
+
+04:47.100 --> 04:51.700
+with that actually, like loss of accelerator is
+
+04:51.700 --> 04:55.900
+kind of something is very very difficult to have
+
+04:55.900 --> 04:58.300
+a scalable application because there's an iniquitous
+
+04:58.300 --> 05:01.000
+Kay's Jewelers on accelerator to kind of enable
+
+05:01.000 --> 05:03.700
+application to distribute these tasks amount that
+
+05:03.700 --> 05:07.200
+you know, I actually see if you so that's actually
+
+05:07.200 --> 05:12.200
+kind of a challenge our respective with using panties.
+
+05:14.000 --> 05:16.900
+I definitely agree, you know when it when you're
+
+05:16.900 --> 05:21.700
+looking at GPS systems in this is shocking thing
+
+05:21.700 --> 05:24.400
+for somebody worked at media to say but it's not just
+
+05:24.400 --> 05:27.900
+about programming the GPA writing the kids can ride
+
+05:27.900 --> 05:31.100
+in front of the GPU. You know, you're going to have
+
+05:31.100 --> 05:33.100
+some of that with your workload that's going to be
+
+05:33.100 --> 05:36.600
+on the seat to you. If you know it might be that large
+
+05:36.600 --> 05:39.600
+part of that is management or coordination or I am
+
+05:39.600 --> 05:45.200
+cheese off for you a nice solution to really be able
+
+05:45.200 --> 05:49.600
+to write actual heterogeneous programs, which
+
+05:49.600 --> 05:52.100
+is really what you want. You want to be able to easily
+
+05:52.100 --> 05:55.700
+and seamlessly right code that can run on either
+
+05:55.700 --> 05:59.800
+the post or the device and that can move between hosted
+
+05:59.800 --> 06:03.200
+device as needed scheduling coordination between
+
+06:03.200 --> 06:06.000
+Austin devices, right that is status. One of the
+
+06:06.000 --> 06:11.900
+weak points of Off Systems. I believe if you look
+
+06:11.900 --> 06:14.700
+at machine black summit why you have Six months two
+
+06:14.700 --> 06:25.700
+gpus on a 96 course power cores able to keep up with
+
+06:25.700 --> 06:29.800
+the computation that the dp100 can do all the time
+
+06:29.800 --> 06:40.100
+schedule for for managing the system and costing
+
+06:40.100 --> 06:42.600
+systems are perfect for that because he can do I how
+
+06:42.600 --> 06:48.000
+do I owe they can do networking. They can do the Dacono
+
+06:48.000 --> 06:53.500
+launching and coordination between So we have time
+
+06:53.500 --> 07:00.000
+for one more statement. Bible dad's and then also
+
+07:00.000 --> 07:11.400
+does Bass Run time they help with. And like useful
+
+07:11.400 --> 07:22.100
+for application with any kind of way. Spaceman to
+
+07:22.100 --> 07:31.200
+other more commonly used. Okay, so I think we should
+
+07:31.200 --> 07:37.900
+go to the Penance question 2. And how does a C plus
+
+07:37.900 --> 07:42.200
+plus language standard impact efficiency and complexity
+
+07:42.200 --> 07:50.300
+of programming AMT systems. Something for Bryce
+
+07:50.300 --> 08:03.900
+to answer right? Also experience if I may give you
+
+08:03.900 --> 08:09.100
+props a second to think about it. I think that the
+
+08:09.100 --> 08:13.700
+evolution of C plus plus for the last 10 years or so.
+
+08:13.700 --> 08:21.200
+It's definitely simplified the task of creating
+
+08:21.200 --> 08:30.900
+the empty system itself. and especially then you
+
+08:30.900 --> 08:33.200
+language features that have been introduced and
+
+08:33.200 --> 08:37.000
+in the seat buckle 17 have definitely helped to reduce
+
+08:37.000 --> 08:41.400
+the amount of code. We have to maintain the Matrix
+
+08:41.400 --> 08:45.600
+on the other end and I'm not sure what you're referring
+
+08:45.600 --> 08:50.000
+to that question. Are you referring to the complexity
+
+08:50.000 --> 08:53.600
+of programming using and cheese or a Brooklyn BMT?
+
+08:53.600 --> 08:58.700
+Nevertheless? I think that the latest language
+
+08:58.700 --> 09:05.400
+features have also simplified apis. We expose simplify
+
+09:05.400 --> 09:08.600
+C dose of the application programmer to work with
+
+09:08.600 --> 09:13.800
+us because he has a very complex language and the
+
+09:13.800 --> 09:18.500
+language itself. It's simpler that cost of the program.
+
+09:19.200 --> 09:25.400
+Sound like a few things of a few things in this General
+
+09:25.400 --> 09:30.000
+subject. The first is that I think if you look at the
+
+09:30.000 --> 09:33.800
+C plus plus abstract Machine model, it is inherently
+
+09:33.800 --> 09:39.300
+a natural fit for the AMT model. And in fact, you could
+
+09:39.300 --> 09:42.300
+even argue that the C+ plus abstract Machine model
+
+09:42.300 --> 09:49.200
+is an AMT model in the sea purpose abstract machine.
+
+09:49.200 --> 09:52.200
+We have a notion of threads of execution in execution
+
+09:52.200 --> 09:58.100
+agents that are operating on you know, a set of operation
+
+09:58.100 --> 10:01.200
+a set of objects that exist in a global address space
+
+10:01.200 --> 10:09.300
+that is more or less the basics of AMT model and in
+
+10:09.300 --> 10:12.200
+C plus plus 17. We not only introduced The Parallel
+
+10:12.200 --> 10:17.300
+algorithms, but we overhauled the abstract machine
+
+10:17.300 --> 10:23.300
+to introduce. An ocean of forward progress guarantees
+
+10:23.300 --> 10:26.400
+and she introduced the notion of different classes
+
+10:26.400 --> 10:33.600
+of execution agents, which greatly expand the types
+
+10:33.600 --> 10:39.300
+of scheduling systems and Hardware that can run
+
+10:39.300 --> 10:46.900
+C plus plus coat second thing I say is that I'm speaking
+
+10:46.900 --> 10:51.800
+as the the head of the sepal. So slight is people such
+
+10:51.800 --> 10:56.400
+as Library Design Group almost everything that
+
+10:56.400 --> 11:00.100
+we are focusing on in the seat post with standard
+
+11:00.100 --> 11:06.200
+library for the next 10 years revolves around asynchronous
+
+11:06.200 --> 11:10.200
+programming and specifically asynchronous IO
+
+11:10.200 --> 11:15.200
+so one of the major features that we are hoping to
+
+11:15.200 --> 11:22.700
+land and sea + + 23 is Executives, which is is a model
+
+11:22.700 --> 11:28.400
+and an extraction around scheduling systems in
+
+11:28.400 --> 11:33.600
+task execution and and asynchronous eye out and
+
+11:33.600 --> 11:41.000
+that is going to be the framework for a number of Hirelevel
+
+11:41.000 --> 11:49.400
++ 8 x generation file IO asynchronous file IO layer
+
+11:49.400 --> 11:54.900
+that we probably built on top of that in 26 of 29 and
+
+11:54.900 --> 11:57.900
+the drive for a lot of these things doesn't necessarily
+
+11:57.900 --> 12:01.300
+come from HBC. It comes from the broad or C plus plus
+
+12:01.300 --> 12:06.500
+Community. Where is the style? Is it going to storm
+
+12:06.500 --> 12:11.400
+hermine is Justice come but it it also serves the
+
+12:11.400 --> 12:15.600
+needs of the community very well. So I think a lot
+
+12:15.600 --> 12:18.900
+of the things that we're doing this particular executor.
+
+12:18.900 --> 12:27.100
+It's going to be a great 2 a.m. Show the executives
+
+12:27.100 --> 12:29.500
+will provide the glue that will allow us to move.
+
+12:29.500 --> 12:32.200
+These nice towers are building blocks. I showed
+
+12:32.200 --> 12:35.100
+him my presentation in the end. It will give us the
+
+12:35.100 --> 12:41.500
+means to create uniformity is for Hydra genius cross
+
+12:41.500 --> 12:44.600
+system scheduling for writing code that looks the
+
+12:44.600 --> 12:48.600
+same in terms of apis, but still can be very flexible
+
+12:48.600 --> 12:53.500
+e it's up to all kinds of different things like different
+
+12:53.500 --> 12:57.500
+architectures different your clothes and so on.
+
+12:57.500 --> 12:59.900
+So I'm looking forward to that. I'm very glad that
+
+12:59.900 --> 13:04.100
+things go that way. So your second yet. Both of you
+
+13:04.100 --> 13:14.300
+are talking about I speak to executor stats. All
+
+13:14.300 --> 13:16.800
+of what is going on in the standardization committee.
+
+13:16.800 --> 13:25.300
+The current points towards different interfaces
+
+13:25.300 --> 13:28.300
+with Lower level than what we expose today in hbx.
+
+13:29.500 --> 13:37.100
+OK Google, can I can I put in here so I was wondering
+
+13:37.100 --> 13:40.100
+whether to keep my mouth shut or waiting to this.
+
+13:40.100 --> 13:44.200
+What I'm about to say is not my official position
+
+13:44.200 --> 13:46.700
+are my research groups are there are lots of the young
+
+13:46.700 --> 13:50.100
+people in my group for C plus plus entusiasta. I'm
+
+13:50.100 --> 13:52.000
+just going to start some trouble because it's the
+
+13:52.000 --> 13:58.200
+panel has brought. So a couple of things. Plus plus
+
+13:58.200 --> 14:02.200
+has doesn't use C plus plus in deep weighs and part
+
+14:02.200 --> 14:03.900
+of the reason is programming model doesn't need
+
+14:03.900 --> 14:05.900
+it and part of the other reason was because you're
+
+14:05.900 --> 14:09.800
+just too old. So we were running on Blue Jean for 21
+
+14:09.800 --> 14:13.400
+years. We couldn't even use C plus plus 11 a side use
+
+14:13.400 --> 14:16.100
+its features. And so all these backward compatibility
+
+14:16.100 --> 14:18.900
+meant we were not going there but leaving that aside
+
+14:18.900 --> 14:24.300
+we use not mouth for CSE + 270 Blue. Jean is gone. Everyone
+
+14:24.300 --> 14:28.100
+supports are using what we can but my question is
+
+14:28.100 --> 14:31.600
+C plus plus What time does Mike remember a thing called
+
+14:31.600 --> 14:35.200
+finite skull size? This is what Dykstra talked about
+
+14:35.200 --> 14:42.400
+and a standard that's 1400 Pages while you might
+
+14:42.400 --> 14:47.300
+put a really nice features in it and and be really
+
+14:47.300 --> 14:49.700
+pleased with how we can ride this little beautiful
+
+14:49.700 --> 14:55.600
+artifact on top of it, but it isn't it a complex their
+
+14:55.600 --> 14:59.100
+food of Love Stuff in what happens to that complexity
+
+14:59.100 --> 15:04.900
+programming when we have such such a large language.
+
+15:05.800 --> 15:11.700
+It's actually closer to 1220 200 Pages these days.
+
+15:11.700 --> 15:21.000
+Sometimes we end up adding things in the interest
+
+15:21.000 --> 15:28.200
+of simplifying things. The C plus plus committee
+
+15:28.200 --> 15:32.400
+is getting are more targeted in what we aim to add
+
+15:32.400 --> 15:37.900
+to C plus plus a lot of the features that we've added
+
+15:37.900 --> 15:42.900
++ C + + 17 + 2 + 20 features that were envisioned as part
+
+15:42.900 --> 15:47.100
+of C plus plus, you know back when it was first created.
+
+15:47.100 --> 15:52.700
+It's just taking a while to deliver them. I think
+
+15:52.700 --> 15:56.500
+for a language like c-plus plus which is multi Paradigm,
+
+15:56.500 --> 16:01.800
+which has a very large user base. Yeah. There's going
+
+16:01.800 --> 16:03.900
+to be complexity but you don't have to use all that
+
+16:03.900 --> 16:08.500
+complexity and there's no one. If users for one user
+
+16:08.500 --> 16:11.800
+for which everything in the C plus plus standard
+
+16:11.800 --> 16:14.700
+is something that's for them in one of the strengths
+
+16:14.700 --> 16:20.800
+of C plus plus is that you can use the parts that you
+
+16:20.800 --> 16:24.100
+know are best suited for you and for your use casing
+
+16:24.100 --> 16:29.000
+for your application. If I may add one more thing,
+
+16:29.000 --> 16:33.600
+I believe that keep our place has been taught the
+
+16:33.600 --> 16:38.100
+wrong way for a very long time, which is one of the
+
+16:38.100 --> 16:47.200
+biggest legacies we have to overcome and that you
+
+16:47.200 --> 16:49.500
+stop talkin about Point dozen the last lecture.
+
+16:50.500 --> 16:54.400
+Open introductory course lecture as nowadays.
+
+16:54.400 --> 16:58.800
+Everybody is doing things and that's what I mean
+
+16:58.800 --> 17:03.000
+by that is that you can teach a safe subset of C plus
+
+17:03.000 --> 17:09.900
+plus that is accessible to first-year students
+
+17:09.900 --> 17:14.900
+and that's still an able to utilize a large part of
+
+17:14.900 --> 17:18.400
+its power. So you don't have to look into each darker
+
+17:18.400 --> 17:25.300
+any and look Duo to use it properly. It's even the
+
+17:25.300 --> 17:35.800
+other way around that is kind of my experience that
+
+17:35.800 --> 17:47.900
+is tested on satus Pass Program on the panel siding
+
+17:47.900 --> 17:50.800
+with superstars 11. I think a lot of people had written
+
+17:50.800 --> 18:03.200
+it off and I was only having a clean slate has made
+
+18:03.200 --> 18:07.500
+it possible for us to at least try to pick very simple
+
+18:07.500 --> 18:11.000
+and you know composable abstractions in a way that
+
+18:11.000 --> 18:15.600
+may not be possible in a system where you have to contend
+
+18:15.600 --> 18:24.800
+with and what it means for an execution. Around sings
+
+18:24.800 --> 18:28.900
+leg unifying execution models across the accelerators.
+
+18:28.900 --> 18:32.800
+So not just CPU and GPU but also things like, you know,
+
+18:32.800 --> 18:34.800
+I'm coming machine learning specific accelerator
+
+18:34.800 --> 18:37.300
+and they have very very restricted programming
+
+18:37.300 --> 18:41.800
+models. We at least try to extend possible to have
+
+18:41.800 --> 18:48.400
+consistent semantics across all devices with instructions.
+
+18:52.600 --> 18:55.300
+Okay, thanks. This was a nice cuz I was saying argument
+
+18:55.300 --> 18:58.300
+because we have to go to the next question because
+
+18:58.300 --> 19:04.900
+I'm a little bit over. Okay, I want to see what question
+
+19:04.900 --> 19:09.000
+is. What are the differences between hbx Trulia
+
+19:09.000 --> 19:14.800
+openmp and jam plus plus AMT paradigms and how can
+
+19:14.800 --> 19:17.700
+these differences affect the power load performance?
+
+19:24.200 --> 19:32.000
+Maybe non authors should speak about it first. like
+
+19:32.000 --> 19:38.200
+the people from outside of Campus dosage PX and maybe
+
+19:38.200 --> 19:50.000
+open MPP can speak well, I will say that open and Pete
+
+19:50.000 --> 19:54.400
+basically doesn't try to reproduce What MPI does
+
+19:54.400 --> 20:00.000
+going across the cluster but modern openmp support
+
+20:00.000 --> 20:06.900
+all of the relevant tasking across the seas and is
+
+20:06.900 --> 20:10.400
+coming along and some people believe that it's the
+
+20:10.400 --> 20:14.300
+preferred method for openmp going forward is to
+
+20:14.300 --> 20:17.600
+use the Tascam model model where it's relevant and
+
+20:17.600 --> 20:21.200
+I guess the difference is is still in how we view the
+
+20:21.200 --> 20:24.600
+memory. I think that's critical to the difference
+
+20:24.600 --> 20:28.800
+between the possibly the HP X-Type Paradigm and
+
+20:28.800 --> 20:34.200
+me open and p-type Paradigm is weather when you talk
+
+20:34.200 --> 20:37.800
+me about immutable date done. So I'm how that's how
+
+20:37.800 --> 20:41.000
+that shared how data is moved around and the applications
+
+20:41.000 --> 20:43.900
+and how much data needs to be moved around. I think
+
+20:43.900 --> 20:47.000
+that's what people have come across when they tried
+
+20:47.000 --> 20:52.300
+to Implement some of the standard, you know HPC type
+
+20:52.300 --> 20:59.900
+algorithms and codes even and so on they sometimes
+
+20:59.900 --> 21:04.800
+run into trouble with dealing with go cells and how
+
+21:04.800 --> 21:09.000
+to update the inner inner zones and and so on so, I
+
+21:09.000 --> 21:13.500
+think that's one of the primary differences. I think
+
+21:13.500 --> 21:16.700
+that that there's definitely certain algorithms
+
+21:16.700 --> 21:19.900
+that lend themselves to the name. T-Type paridon
+
+21:19.900 --> 21:25.700
+it and and making those Available to people is very
+
+21:25.700 --> 21:32.100
+important. I think one of them has contributed to
+
+21:32.100 --> 21:38.100
+the language portability supporting languages
+
+21:38.100 --> 21:42.800
+of water on and see in other languages which is the
+
+21:42.800 --> 21:46.300
+outside of the scope of at least hbx where we are focused
+
+21:46.300 --> 21:50.000
+on C plus plus and I admit that we have a hard time to
+
+21:50.000 --> 21:52.600
+do things with Voltron correctly because Ford run
+
+21:52.600 --> 21:55.700
+the memory modeling important doesn't play well
+
+21:55.700 --> 22:03.600
+with others reading tool that has its importance
+
+22:03.600 --> 22:08.300
+and I'm very glad that recent versions have called
+
+22:08.300 --> 22:12.300
+up and 1/2 editas dependencies and things like that
+
+22:12.300 --> 22:17.400
+that's helped us to orchestrate more complex workloads
+
+22:17.400 --> 22:22.300
+beyond our lives. Opening feed Direction has been
+
+22:22.300 --> 22:24.700
+very good. But there is a from that point of view I
+
+22:24.700 --> 22:28.200
+be with you. I don't know if I can put my finger on it
+
+22:28.200 --> 22:33.200
+properly but something to do somehow openmp doesn't
+
+22:33.200 --> 22:36.600
+work for lice work enough. In other words. That is
+
+22:36.600 --> 22:42.400
+just a little too much control or over the pizza Man's
+
+22:42.400 --> 22:46.400
+dad that the scheduler cannot flexibly move things
+
+22:46.400 --> 22:51.500
+around is my gut feeling about opening positions
+
+22:51.500 --> 22:57.600
+in some of the more the more my implementations do
+
+22:57.600 --> 23:02.000
+allow you to allows a compiler a lot of freedom to
+
+23:02.000 --> 23:05.200
+make choices and a lot of freedom within the hardware
+
+23:05.200 --> 23:13.900
+to make choices as well really doesn't support is
+
+23:13.900 --> 23:16.600
+it doesn't support like I said going across an entire
+
+23:16.600 --> 23:20.700
+PC machine and Italy set up to MPI or something else
+
+23:20.700 --> 23:26.600
+even hpx for instance and they they try very hard
+
+23:26.600 --> 23:31.500
+not to specify that. The bad part is okay. That part
+
+23:31.500 --> 23:34.600
+is okay. I think I think something simple like ability
+
+23:34.600 --> 23:37.800
+to spread a loop or a subset, of course while something
+
+23:37.800 --> 23:41.000
+else but it's over the last and changing that there
+
+23:41.000 --> 23:43.400
+are some I think I probably shouldn't speak too much
+
+23:43.400 --> 23:46.600
+be an example at hand, but there are limitations.
+
+23:46.600 --> 23:50.600
+Maybe I will I will construct them and talk about
+
+23:50.600 --> 23:55.500
+it, but I think we should probably return to respond
+
+23:55.500 --> 23:58.200
+to that if you want, but I want to return to this main
+
+23:58.200 --> 24:02.900
+question. Those can I comment on the main questions
+
+24:02.900 --> 24:05.500
+aren't like other user another the developer of
+
+24:05.500 --> 24:13.300
+anything would likely try to obstruct an Allegiant
+
+24:13.300 --> 24:26.200
+spring break and from this perspective. It don't
+
+24:26.200 --> 24:38.000
+have any speedymoto that you will use another empty
+
+24:38.000 --> 24:45.500
+mono also provides instruction and Also some features
+
+24:45.500 --> 24:57.800
+that are related to God. I think it's a test to measure
+
+24:57.800 --> 25:08.500
+performance yet, but there's a future. Answer one,
+
+25:08.500 --> 25:12.700
+I want to make it in this direction is that from the
+
+25:12.700 --> 25:15.800
+Julia perspective? We actually try to get a lot of
+
+25:15.800 --> 25:20.500
+help with almonds for a language design considerations
+
+25:20.500 --> 25:25.600
+as opposed to having in a fancy run time systems for
+
+25:25.600 --> 25:32.200
+a run time schedule a chance to be part of the tested
+
+25:32.200 --> 25:35.700
+and scalable sure, but you know, we know that's not
+
+25:35.700 --> 25:39.000
+so very fancy things one can do at the runtime level
+
+25:39.000 --> 25:43.200
+particular when it comes to things like taking performance
+
+25:43.200 --> 25:47.200
+of machines into account and you know doing more
+
+25:47.200 --> 25:50.000
+active load balancing we're running tasks already
+
+25:50.000 --> 25:52.100
+moved across machines with the Cowardly Dog very
+
+25:52.100 --> 25:55.900
+much do then I would like to see in the future has been
+
+25:55.900 --> 26:00.400
+explored and some of the other Frameworks focus
+
+26:00.400 --> 26:15.200
+more on the SMS on note from the language and I think
+
+26:15.200 --> 26:20.100
+we could do the same and Julia into improving our
+
+26:20.100 --> 26:22.800
+own runtime assistance and hopefully get the best
+
+26:22.800 --> 26:31.900
+of both worlds. Yeah, I think that's that that's
+
+26:31.900 --> 26:34.800
+like see this one thing I want to say about that is
+
+26:34.800 --> 26:39.200
+that is that it is my current time can do stuff that
+
+26:39.200 --> 26:44.000
+the that's pretty interesting and useful and one
+
+26:44.000 --> 26:48.100
+of the things that we rely on Jam plus plus is this
+
+26:48.100 --> 26:50.900
+idea of persistence typical science and engineering
+
+26:50.900 --> 26:55.800
+application than me but it's rationed Food donation
+
+26:55.800 --> 26:58.700
+center to Skype time step objects tend to behave
+
+26:58.700 --> 27:02.200
+somewhat similar and that someone similarly is
+
+27:02.200 --> 27:05.900
+our only friend in other Weiser Dynamic Advance
+
+27:05.900 --> 27:08.700
+skip answer using that principal of persistent.
+
+27:08.700 --> 27:12.000
+We we can use the pass measurements to predict near
+
+27:12.000 --> 27:15.700
+future behavior and balance load and things accordingly
+
+27:15.700 --> 27:18.800
+at least when this kind of Persistence of Lies. So
+
+27:18.800 --> 27:22.600
+that's one thing we try to do I am not sure if I can for
+
+27:22.600 --> 27:25.500
+sure do that. I don't make it does do that. And the
+
+27:25.500 --> 27:28.100
+other thing I meant to say say Before I Let Go of the
+
+27:28.100 --> 27:31.100
+mic is I just remembered The point of comparison
+
+27:31.100 --> 27:35.000
+when you're talking about Julia is the dagger. So
+
+27:35.000 --> 27:36.800
+in Champlin, plus there's something else. I should
+
+27:36.800 --> 27:39.300
+I go. They used to be just a plain that girl and structure
+
+27:39.300 --> 27:44.900
+structured 2° dependencies between communication
+
+27:44.900 --> 27:50.000
+program order and within an object data within an
+
+27:50.000 --> 27:54.000
+object and we can't do we use that but we can do not
+
+27:54.000 --> 27:56.400
+expose too much of that to run time because only been
+
+27:56.400 --> 28:00.300
+in a sub part of the object becomes competition becomes
+
+28:00.300 --> 28:05.300
+ready is it needs to be scheduled and so we just use
+
+28:05.300 --> 28:07.700
+that internally inside the optic that's another
+
+28:07.700 --> 28:11.600
+point of a notice care. So I'm curious about spxs
+
+28:11.600 --> 28:16.100
+use of persistence. Like like attrition rate duration
+
+28:16.100 --> 28:23.900
+we can use the information. Hbx is a C+ Library. So
+
+28:23.900 --> 28:27.900
+by definition you can do everything you want. Otherwise,
+
+28:27.900 --> 28:32.700
+it wouldn't be C plus plus a we don't have any explicit
+
+28:32.700 --> 28:35.500
+facilities supporting that but I don't see no reason
+
+28:35.500 --> 28:41.700
+why we couldn't be done. Car isn't there the the Apex
+
+28:41.700 --> 28:54.000
+work with the yes 30 seconds because my little bit
+
+28:54.000 --> 29:01.500
+over I will be very quick analysis tool kits that
+
+29:01.500 --> 29:06.800
+can be compiled that can be used to collect performance
+
+29:06.800 --> 29:10.300
+of Amendment 1 time and feet that you what we call
+
+29:10.300 --> 29:12.600
+the policy engine, which is essentially just that
+
+29:12.600 --> 29:15.700
+uses a blank function which receives information
+
+29:15.700 --> 29:18.000
+and makes a decision and tongue some notes in the
+
+29:18.000 --> 29:21.200
+application or in the runtime system. So that is
+
+29:21.200 --> 29:25.700
+definitely available. Call Apex for whatever.
+
+29:25.700 --> 29:30.600
+I don't know how that smells out, but Listening Library,
+
+29:30.600 --> 29:35.000
+it's developed by University of Oregon by Kevin
+
+29:35.000 --> 29:42.300
+Hart. I think we should move to the next question.
+
+29:48.500 --> 29:51.900
+And it's more like an application questions have
+
+29:51.900 --> 29:57.100
+seized hbx Trulia openmp and champ s+ AMT paradigms
+
+29:57.100 --> 30:00.100
+performance being evaluated against scientific
+
+30:00.100 --> 30:04.500
+applications examples in you Hot Topic AI or any
+
+30:04.500 --> 30:08.700
+other Frameworks and if so, how did you lose Frameworks
+
+30:08.700 --> 30:12.300
+get benefits using these AMT models compared to
+
+30:12.300 --> 30:23.800
+traditional runtime systems. We will definitely
+
+30:23.800 --> 30:31.500
+have done mini app again scientific MPI and make
+
+30:31.500 --> 30:36.700
+sure that we are as good or better than npiv. Even
+
+30:36.700 --> 30:40.400
+without any Dynamic load balancing benefits that
+
+30:40.400 --> 30:46.300
+bottom line to make sure that we are not often times.
+
+30:46.300 --> 30:48.800
+You can't eat because of pollution or blocking and
+
+30:48.800 --> 30:52.700
+Salon against each other. We have not done that much
+
+30:52.700 --> 30:59.000
+water flows. And then maybe there are some other
+
+30:59.000 --> 31:03.600
+religion partial flexi, maybe other things we need
+
+31:03.600 --> 31:24.800
+to do and see how we are doing. Computing exactly
+
+31:24.800 --> 31:35.000
+because it was actually just going to be some additional
+
+31:35.000 --> 31:40.100
+other Mini at level benchmarks and compare both
+
+31:40.100 --> 31:45.000
+performance and scalability and Clarity of the
+
+31:45.000 --> 31:58.200
+recycle conciseness or something like that with
+
+31:58.200 --> 32:02.400
+apparel research kernels. So that might be a place
+
+32:02.400 --> 32:14.100
+to to look at very frequently. You know, what what
+
+32:14.100 --> 32:17.600
+what happens is 1 a.m. She comes up with some particular
+
+32:17.600 --> 32:21.100
+Benchmark and Compares again some other AMT is and
+
+32:21.100 --> 32:24.900
+now Everybody agrees on the validity of that Benchmark
+
+32:24.900 --> 32:28.900
+and I think it would certainly benefit everybody
+
+32:28.900 --> 32:38.300
+if we had agreed upon. Be in Los Alamos tried to develop
+
+32:38.300 --> 32:41.900
+a framework, which is like a section of a different
+
+32:41.900 --> 32:49.100
+song than systems and and like the country before
+
+32:49.100 --> 33:02.300
+continue. That is like I'm so that the company Chris
+
+33:02.300 --> 33:09.600
+trying to get the screen work. I will also have until
+
+33:09.600 --> 33:16.300
+you are complicated in NCI world is a much simpler
+
+33:16.300 --> 33:48.500
+and more exponents. And also I think I might use her
+
+33:48.500 --> 33:55.100
+tomorrow. Arena makes a really good point one thing
+
+33:55.100 --> 33:59.300
+that we frequently and HBC don't consider in a bench
+
+33:59.300 --> 34:03.000
+marking. It all is developer effort. If you don't
+
+34:03.000 --> 34:06.900
+like the amount of time, it takes you to write the
+
+34:06.900 --> 34:09.900
+code does matter because we don't live in a perfect
+
+34:09.900 --> 34:12.800
+world where you can just pick the most optimal solution
+
+34:12.800 --> 34:17.500
+and and you have infinite developer effort to I had
+
+34:17.500 --> 34:21.300
+to implement it. I'm so sometimes the solution that
+
+34:21.300 --> 34:24.600
+is the more natural fit for an application is better,
+
+34:24.600 --> 34:29.700
+even if it's not the best because it's the thing that
+
+34:29.700 --> 34:38.600
+you can get up and running sooner. I'll just jump
+
+34:38.600 --> 34:41.100
+in Reedley at the end because you're not getting
+
+34:41.100 --> 34:44.400
+getting to cutting down the middle of the time. We're
+
+34:44.400 --> 34:52.500
+getting I hope it went well get in the back, but unfortunately,
+
+34:52.500 --> 34:56.500
+I can't really offer any Benchmark comparison because
+
+34:56.500 --> 35:04.000
+our system is so that means we do get you know all the
+
+35:04.000 --> 35:06.800
+applications. So there's a very big climate simulation
+
+35:06.800 --> 35:15.800
+being done in Julia and Julie. I also thank him for
+
+35:15.800 --> 35:25.700
+the offer comparison to other we don't want to create
+
+35:25.700 --> 35:28.700
+a benchmark that is just a we want to create a paper
+
+35:28.700 --> 35:33.100
+and pencil Benchmark. We don't want exactly that
+
+35:33.100 --> 35:35.100
+everyone runs. We want to say this is the problem
+
+35:35.100 --> 35:49.700
+with this. 15 year old language and solve it I mean,
+
+35:49.700 --> 36:03.300
+I hear it stresses certain aspects of AMT systems
+
+36:03.300 --> 36:05.800
+that sort of an extreme case. We could all look like
+
+36:05.800 --> 36:08.900
+if we could obviously something only Benchmark,
+
+36:08.900 --> 36:10.500
+but that's the sort of thing that you can mention
+
+36:10.500 --> 36:17.200
+any in any of these Frameworks. I really need to go
+
+36:17.200 --> 36:26.300
+beyond that kind of maybe need to fix the algorithm
+
+36:26.300 --> 36:29.000
+because if you're just say starving a pde you could
+
+36:29.000 --> 36:32.700
+do it in many different ways. So you may want to fix
+
+36:32.700 --> 36:37.200
+which kind of an algorism your dynamic programming
+
+36:37.200 --> 36:41.600
+and then just having some cash on a story that we got
+
+36:41.600 --> 36:50.600
+the stressing out Treads specific. nice, but you
+
+36:50.600 --> 36:53.600
+don't want to make a list make changes completely
+
+36:53.600 --> 36:57.200
+but one that measures is fine grained task creation
+
+36:57.200 --> 37:01.500
+performance and for you to measure and it will be
+
+37:01.500 --> 37:04.300
+probably a good thing to have for every one of us to
+
+37:04.300 --> 37:10.800
+have their butt history like 30 years on I know this
+
+37:10.800 --> 37:14.900
+find me performance benchmarking has been a detriment
+
+37:14.900 --> 37:18.700
+for a variety of things that I can just distract you
+
+37:18.700 --> 37:26.100
+from The Benchmark that distresses one particular
+
+37:26.100 --> 37:28.700
+I wasn't saying that that's the only Benchmark but
+
+37:28.700 --> 37:32.700
+something like that is something that you could
+
+37:32.700 --> 37:35.100
+do in Julia you could do in C plus plus you could do
+
+37:35.100 --> 37:37.600
+in Python could do in the language and if we could
+
+37:37.600 --> 37:42.900
+get a collection of you know 20 Problems where we
+
+37:42.900 --> 37:45.100
+can Define, you know, it's scription of what the
+
+37:45.100 --> 37:49.900
+algorithm is is that we want to use that stress various
+
+37:49.900 --> 37:51.600
+different areas that I think will be beneficial
+
+37:51.600 --> 37:54.600
+for the community. That's actually pretty good
+
+37:54.600 --> 38:00.500
+idea and also may be considering having Benchmark,
+
+38:00.500 --> 38:03.100
+which is going to be like an abusive Benchmark as
+
+38:03.100 --> 38:06.500
+well. So because it's not just in our benchmarks.
+
+38:06.500 --> 38:09.300
+Do you also want to look to that performance of this
+
+38:09.300 --> 38:12.000
+language is already platforms are distributed
+
+38:12.000 --> 38:15.200
+one because it's kind of in real hard and Industrial
+
+38:15.200 --> 38:19.500
+like in cloud or identity systems are looking for
+
+38:19.500 --> 38:23.900
+a kind of getting benefits of this language is over
+
+38:23.900 --> 38:28.200
+now. It's not just waiting out even say that one of
+
+38:28.200 --> 38:31.400
+those one of the Benchmark a particular algorithm,
+
+38:31.400 --> 38:34.700
+but it should be handling a particular type of air
+
+38:34.700 --> 38:39.500
+like for example saying, you know benchmark that
+
+38:39.500 --> 38:43.400
+that that addresses Question. How does your AMT
+
+38:43.400 --> 38:48.500
+perform when a process dies when I know. That's how
+
+38:48.500 --> 38:55.300
+it how was he able to become? Will be good to add to
+
+38:55.300 --> 39:08.600
+isolate exactly which ones are the most important
+
+39:08.600 --> 39:12.400
+but would be really good to continue along with gas.
+
+39:12.400 --> 39:18.200
+I think. Okay, I think this was a quiet as nice closing
+
+39:18.200 --> 39:22.200
+statement and we can move to the second last question.
+
+39:24.700 --> 39:28.700
+So how does the supercomputing community benefit
+
+39:28.700 --> 39:33.200
+from using AT&T on Modern or future supercomputers?
+
+39:35.700 --> 39:42.200
+And I go first how does it benefit whether it would
+
+39:42.200 --> 39:45.200
+benefit if it's a question of whether we can influence
+
+39:45.200 --> 39:47.700
+the community in developing applications using
+
+39:47.700 --> 39:52.500
+anything except MPI Plus open NPR Coco's our garage
+
+39:52.500 --> 39:54.800
+or something like that, right and it can can people
+
+39:54.800 --> 40:00.500
+just consider using something difficult problem.
+
+40:00.500 --> 40:04.600
+All of us have this problem with kind of started following
+
+40:04.600 --> 40:07.600
+it in our own way with nandi and the only way that was
+
+40:07.600 --> 40:09.900
+because after talking about it for a while we just
+
+40:09.900 --> 40:12.400
+said, okay, we got to develop an application Albertsons
+
+40:12.400 --> 40:18.500
+Library DVD and only then some people been paid attention,
+
+40:18.500 --> 40:27.000
+but that programmers is a very hard task. This is
+
+40:27.000 --> 40:29.400
+very interesting because if you look at the web programming
+
+40:29.400 --> 40:32.900
+would like all these other programming stuff that
+
+40:32.900 --> 40:36.300
+goes on for the last 10 20 years every year. The new
+
+40:36.300 --> 40:38.600
+programming model and becomes popular and whatever
+
+40:38.600 --> 40:42.200
+goes out of fashion and so on we seem to have this very
+
+40:42.200 --> 40:45.800
+conservative Community because of the huge gold
+
+40:45.800 --> 40:48.900
+basis and Swatch so I don't have the solution but
+
+40:48.900 --> 40:51.900
+this is the problem that this question raises which
+
+40:51.900 --> 40:56.800
+is how can people how can we have people experimenting
+
+40:56.800 --> 41:00.400
+with new programming models more than I can be part
+
+41:00.400 --> 41:03.500
+of the solution has to be interoperability so that
+
+41:03.500 --> 41:05.600
+they can write most of their programming MPI and
+
+41:05.600 --> 41:08.800
+do a little bit in a dabble in one of our models for
+
+41:08.800 --> 41:11.600
+example, but I would like to hear answer to that aspect
+
+41:11.600 --> 41:18.100
+of this question. I think one of the that the trend
+
+41:18.100 --> 41:21.800
+in super computers & N Hardware is increasingly
+
+41:21.800 --> 41:25.500
+towards specialization and heterogeneous systems
+
+41:25.500 --> 41:29.400
+were at the end of Moore's law and the place that we're
+
+41:29.400 --> 41:34.700
+going to get future performance wins for new hardware
+
+41:34.700 --> 41:37.900
+is going to be in specialization week. We've been
+
+41:37.900 --> 41:42.800
+out for a long time. We saw it. I move towards more
+
+41:42.800 --> 41:46.100
+centralization more General Hardware, but that
+
+41:46.100 --> 41:49.300
+trench is is over and now we're starting to see a lot
+
+41:49.300 --> 41:55.600
+more accelerators and accelerators with very specific
+
+41:55.600 --> 42:01.200
+targeted acceleration features like Nvidia tensor
+
+42:01.200 --> 42:07.600
+cores, and I think if you look at what the super supercomputer
+
+42:07.600 --> 42:10.800
+looks like today, you're going to have a multi-threaded
+
+42:10.800 --> 42:14.200
+to post platform. You're going to have at least What
+
+42:14.200 --> 42:21.500
+type of accelerated and I think it's asking a lot
+
+42:21.500 --> 42:26.800
+of the main scientists to tell them to program the
+
+42:26.800 --> 42:32.800
+system you have to write MPI open and key kuta and
+
+42:32.800 --> 42:35.700
+this other thing in this other thing in this other
+
+42:35.700 --> 42:39.400
+thing and one of the nice thing about and cheese that
+
+42:39.400 --> 42:43.000
+they they also give you a uniform abstraction to
+
+42:43.000 --> 42:44.600
+addressing all the different types of parallelism
+
+42:44.600 --> 42:49.000
+in your system. So I can I think that the reason that
+
+42:49.000 --> 42:51.300
+that you should look at and T is is that they're very
+
+42:51.300 --> 42:54.100
+well aligned for the future direction of hardware.
+
+42:57.600 --> 43:01.100
+Right uniform extraction not for translate into
+
+43:01.100 --> 43:06.600
+all of these but for coordinating schedules. So
+
+43:06.600 --> 43:09.400
+I would actually take it further and say we do want
+
+43:09.400 --> 43:13.600
+to expose the same instruction even for lowering
+
+43:13.600 --> 43:18.900
+to The Accelerated as well realize it might be hard
+
+43:18.900 --> 43:21.700
+way harder if you don't control the compiled and
+
+43:21.700 --> 43:33.600
+I just happened to be till Skechers. I couldn't agree
+
+43:33.600 --> 43:39.400
+more Bryce a uniform API. It was syntax and semantics
+
+43:39.400 --> 43:44.000
+which are uniform across different Target architectures
+
+43:44.000 --> 43:49.100
+is very important and I think of us as well on the way
+
+43:49.100 --> 43:53.700
+to give us at API many people of the Lost Years have
+
+43:53.700 --> 43:56.200
+said all we have to sit down we have to actually trade
+
+43:56.200 --> 44:01.300
+news. It's a b is for doing that but hey, we already
+
+44:01.300 --> 44:09.900
+have a son and make sure that the deficit under constant
+
+44:09.900 --> 44:23.200
+if your eyes are those things to I think a lot of the
+
+44:23.200 --> 44:28.200
+issues what I mean, I can see it. commuting from MPI
+
+44:28.200 --> 44:45.000
+to music and I tell you use AMC I mean And I think this
+
+44:45.000 --> 44:52.900
+is one issue and another issue is there and there's
+
+44:52.900 --> 45:16.000
+no recipe from there. So many examples. You were
+
+45:16.000 --> 45:20.900
+comparing to MPI and there's some kind of work done.
+
+45:20.900 --> 45:33.000
+And how did it compare but it's kind of application.
+
+45:33.000 --> 45:42.000
+I just was discussed previously and the comparison
+
+45:42.000 --> 45:56.600
+between 80 and over NPI. There is great power in having
+
+45:56.600 --> 45:59.800
+a specification having a standard and we don't have
+
+45:59.800 --> 46:12.000
+that name SeaWorld today other than us. That would
+
+46:12.000 --> 46:15.000
+require us to find commonalities between us right
+
+46:15.000 --> 46:18.300
+and that seems hard at the moment. We all kind of tend
+
+46:18.300 --> 46:21.000
+to abstract different things and provide different
+
+46:21.000 --> 46:29.200
+abstraction to some extent. I might. comparison
+
+46:29.200 --> 46:33.200
+between runtime so people can choose one or another
+
+46:41.000 --> 46:46.100
+I would certainly like to see is a separation to the
+
+46:46.100 --> 46:49.200
+extent possible between you know, the programming
+
+46:49.200 --> 46:52.800
+language expose tired of these systems and then
+
+46:52.800 --> 46:55.800
+they run time scheduling and coordination part
+
+46:55.800 --> 47:07.300
+of it. We could certainly use somebody else's distributed
+
+47:07.300 --> 47:10.200
+scheduler and maybe we could even make it possible
+
+47:10.200 --> 47:12.300
+for people to choose the distributive scheduler
+
+47:12.300 --> 47:14.900
+as we do now with the second schedules that we have
+
+47:14.900 --> 47:17.700
+in Julia depending on you know, the performance
+
+47:17.700 --> 47:20.800
+characteristics of Any Given schedule at for a particular
+
+47:20.800 --> 47:29.100
+Paradise. So, you know, I don't know about that.
+
+47:29.100 --> 47:32.700
+She is a list of possible direction to Define some
+
+47:32.700 --> 47:36.600
+you know, this is what a task is at least maybe not
+
+47:36.600 --> 47:44.500
+a woman's butt. comparison I completely agree with
+
+47:44.500 --> 47:48.400
+you. I think higher-level languages which it in
+
+47:48.400 --> 47:51.300
+fact in some ways specialized for different patterns
+
+47:51.300 --> 47:54.200
+would be would be very useful and for them to connect
+
+47:54.200 --> 47:58.000
+to the rest of the MTN times would be a very good idea
+
+47:58.000 --> 48:04.000
+going to the point that I was making not just taking
+
+48:04.000 --> 48:07.100
+off on a tangent there is that maybe we don't agree
+
+48:07.100 --> 48:11.300
+on our if I love and ppis but maybe Dad component-level
+
+48:11.300 --> 48:20.500
+we could begin and there are well understood. We
+
+48:20.500 --> 48:23.200
+need to standardize data C plus plus on Boost will
+
+48:23.200 --> 48:26.200
+do it for us, but that won't be HPC specific enough.
+
+48:26.200 --> 48:29.200
+So at least we need to come together enough to it to
+
+48:29.200 --> 48:32.900
+do that number to is a distributor location management.
+
+48:32.900 --> 48:35.100
+That's another thing that can be standardized.
+
+48:35.100 --> 48:39.500
+And number three is a persistent load balancing
+
+48:39.500 --> 48:41.400
+when you have a collection of objects and they're
+
+48:41.400 --> 48:45.200
+persistent Loudoun community. Optional in communication
+
+48:45.200 --> 48:50.200
+patterns coming up with a new assignment of object
+
+48:50.200 --> 48:53.300
+to process under various conditions these three
+
+48:53.300 --> 48:57.300
+I think are alright for standardization as components
+
+48:57.300 --> 49:03.400
+of things. I was thinking about and there have been
+
+49:03.400 --> 49:06.100
+some efforts in the past to try to make that happen.
+
+49:06.100 --> 49:12.700
+I think I haven't been successful because enough
+
+49:12.700 --> 49:15.600
+to to work you have to have all the stakeholders present
+
+49:15.600 --> 49:18.900
+and they have to all be really invested in it. And
+
+49:18.900 --> 49:23.200
+I guess I think there have not been the motivation
+
+49:23.200 --> 49:29.200
+yet to get to bring everybody to the table but I think
+
+49:29.200 --> 49:33.300
+its popularity and interest in antique rose and
+
+49:33.300 --> 49:36.800
+I think it will continue to grow especially with
+
+49:36.800 --> 49:39.800
+the prevalence of heterogeneous system. I think
+
+49:39.800 --> 49:43.600
+that they'll be more of a push for this. Okay for sake
+
+49:43.600 --> 49:53.800
+of time you have to move to the last question. what
+
+49:53.800 --> 49:56.700
+Hardware features are required in the Next Generation
+
+49:56.700 --> 50:15.700
+processors to support amt's What do single scheduling
+
+50:15.700 --> 50:18.200
+most popular level sweats and the other thing I would
+
+50:18.200 --> 50:22.000
+like to see us some Hardware support for managing
+
+50:22.000 --> 50:24.800
+distributed addresses or global address spaces
+
+50:24.800 --> 50:36.200
+possibly on the next directly. Cancel two most important
+
+50:36.200 --> 50:42.900
+features. I believe one of the problem is that a lot
+
+50:42.900 --> 50:49.300
+of the things open piano. So empty I can take advantage
+
+50:49.300 --> 50:53.100
+of in terms of performance is that those models have
+
+50:53.100 --> 50:57.100
+been developed and co-design Twizy Hardware Hampden
+
+50:57.100 --> 51:02.100
+and so many of the hardware features and on the capabilities
+
+51:02.100 --> 51:04.500
+have been designed to support these problem models
+
+51:04.500 --> 51:09.900
+directly when it comes to MGS. We all have the problem
+
+51:09.900 --> 51:13.200
+that we have to emulate everything and software
+
+51:13.200 --> 51:18.500
+like the context which is of use of operation that
+
+51:18.500 --> 51:21.400
+can theoretically be implemented an all the way
+
+51:21.400 --> 51:27.100
+out without too much effort and would benefit the
+
+51:27.100 --> 51:29.600
+performance or or the performance of the schedules
+
+51:29.600 --> 51:33.700
+would benefit from endlessly from From this feature
+
+51:33.700 --> 51:39.100
+similar things can be said about the global address
+
+51:39.100 --> 51:44.600
+addressing everything has to be done and software
+
+51:44.600 --> 51:49.000
+nowadays and that somehow Amber superformance.
+
+51:49.000 --> 51:54.600
+We can achieve with empty. One of the things amt's
+
+51:54.600 --> 51:58.200
+might want to look into it like that. If you looked
+
+51:58.200 --> 52:01.700
+at all the dark by Hive machine graph analytics processor,
+
+52:01.700 --> 52:04.500
+maybe something that go beyond the traditional
+
+52:04.500 --> 52:10.600
+HTC space and where the role of EMTs has in those architectures
+
+52:10.600 --> 52:13.400
+and also those problems with your fundamentally
+
+52:13.400 --> 52:17.100
+different than the traditional HBC application.
+
+52:19.200 --> 52:22.800
+How to make a make an addition so I agree with everything
+
+52:22.800 --> 52:34.800
+you said about everything. We're going to actually
+
+52:34.800 --> 52:40.100
+see and large-scale applications that if you're
+
+52:40.100 --> 52:46.300
+using a sin if you're using regular model and the
+
+52:46.300 --> 52:49.200
+primary thing we do in the pool a community often
+
+52:49.200 --> 52:55.100
+to come back up just to use recording replay technology
+
+52:55.100 --> 53:08.600
+and that tends to fall over at large scales and a quick
+
+53:08.600 --> 53:13.500
+read for me, but it never really itchy mainstream
+
+53:13.500 --> 53:21.800
+usability. At the scales get larger and I would like
+
+53:21.800 --> 53:25.300
+to see some Innovation from the hardware side that
+
+53:25.300 --> 53:40.300
+when they said he's here. I Dream Center Sorry can't
+
+53:40.300 --> 53:51.100
+talk. Very small, I was recently aesthetic wallpaper
+
+53:51.100 --> 53:55.300
+at Davis. It just seemed kind of proposing to have
+
+53:55.300 --> 53:59.700
+some if he's your lies ation based on dependency
+
+53:59.700 --> 54:04.000
+graph spy from this free sample. I did not want to
+
+54:04.000 --> 54:08.700
+use that also, like on top of some of the hardware
+
+54:08.700 --> 54:12.400
+accelerator designs and they were claiming that
+
+54:12.400 --> 54:15.500
+she's kind of make it easy for debugging and this
+
+54:15.500 --> 54:17.700
+is kind of a problem that they were also investigating
+
+54:17.700 --> 54:30.500
+so asking dependencies can be Donald's off bear
+
+54:30.500 --> 54:37.300
+only that is possible. I might be wrong, but I wouldn't
+
+54:37.300 --> 54:40.200
+see why I support would help us here because of the
+
+54:40.200 --> 54:48.600
+engine 2.0 anyway, but we have done that. but sure
+
+54:48.600 --> 54:51.600
+if you have an idea how Hardware components hotel
+
+54:51.600 --> 55:01.400
+pools at All means to make sure that this happens
+
+55:01.400 --> 55:07.200
+in the future would have an expiration. However,
+
+55:07.200 --> 55:11.100
+I was just sharing my kind of a study and that's paper.
+
+55:11.100 --> 55:13.000
+That's kind of interesting because they were also
+
+55:13.000 --> 55:16.900
+complaining about Hardware capability on axillary
+
+55:16.900 --> 55:21.100
+Tail as well as that they wanted to kind of a design
+
+55:21.100 --> 55:26.600
+accelerator in in such a way that kind of deal with
+
+55:26.600 --> 55:32.400
+the task in kind of a small task and to be able to distribute
+
+55:32.400 --> 55:36.600
+cast among different accelerator efficiently.
+
+55:36.600 --> 55:40.500
+And then then they ended up to having difficulty
+
+55:40.500 --> 55:46.200
+40 parking. It's too kind of track of execution task
+
+55:46.200 --> 55:50.200
+execution of tasks among the accelerator and a very
+
+55:50.200 --> 55:56.100
+kind of proposing additional. Romans 14. But this
+
+55:56.100 --> 55:59.800
+is just my study and I don't have any experience on
+
+55:59.800 --> 56:02.200
+that yet. But did I guess that's kind of that good
+
+56:02.200 --> 56:06.700
+an interesting topic because it's challenging.
+
+56:06.700 --> 56:12.700
+Let me accept the questions as likely I think it's
+
+56:12.700 --> 56:17.400
+not only that we would like to have more difficult
+
+56:17.400 --> 56:21.600
+than the mg's for MTS but I think we need but a tooling
+
+56:21.600 --> 56:25.600
+support on under for the burgers and then profilers
+
+56:25.600 --> 56:31.200
+and and what not all existing tools except for we
+
+56:31.200 --> 56:34.400
+do and perhaps where we have successfully integrated
+
+56:34.400 --> 56:37.600
+hbx was which if your top news and then this kind of
+
+56:37.600 --> 56:40.800
+thing there are not many tools available or not.
+
+56:40.800 --> 56:45.500
+Even if he is available that allow you to to extend
+
+56:45.500 --> 56:52.100
+them or you can wipe things that are but it's it's
+
+56:52.100 --> 56:55.200
+a pain in the neck. We have tried that and it didn't
+
+56:55.200 --> 57:07.300
+really work out nicely for the parts of antiques
+
+57:07.300 --> 57:20.700
+is I would like to Force One cycle context switching.
+
+57:20.700 --> 57:24.300
+I'm not sure it can make a huge impact on our performance
+
+57:24.300 --> 57:33.300
+hundred Is What It Takes. Not that big a thing but
+
+57:33.300 --> 57:39.500
+remote fightful where is someone getting shot fix
+
+57:39.500 --> 57:42.000
+eyes control message in a remote 540 multiple endpoints
+
+57:42.000 --> 57:45.600
+will be useful and I think I want to get to my other
+
+57:45.600 --> 57:48.900
+pet point which is that we have we all have adaptive
+
+57:48.900 --> 57:51.600
+control systems that are trying to do schedule flexibly
+
+57:51.600 --> 57:55.800
+what comes in the week is nvidia's then saying we
+
+57:55.800 --> 58:00.000
+want to control ourselves and we had a fight what
+
+58:00.000 --> 58:03.200
+to do with that we want to schedule those SMS as we
+
+58:03.200 --> 58:07.200
+want a tortoise demand it is like I know there is another
+
+58:07.200 --> 58:11.400
+task at work for SMS coming down the line I want to
+
+58:11.400 --> 58:14.500
+use 3-g or something like that and I know what I'm
+
+58:14.500 --> 58:19.000
+doing right being there on time so that kind of flexibility
+
+58:19.000 --> 58:24.900
+from the scheduler would be it would be a useful thing
+
+58:24.900 --> 58:36.400
+but then you want to go so cashing as well right Accelerators
+
+58:36.400 --> 58:41.900
+have to do the first day of accelerators have to expose
+
+58:41.900 --> 58:47.100
+scheduling hooks so that amt's can run not a silly
+
+58:47.100 --> 58:50.000
+their entire scheduler, but they can run a scheduler
+
+58:50.000 --> 58:54.800
+on elevators this very common pattern and Cuda called
+
+58:54.800 --> 58:57.800
+a super Colonel or basically you have one Colonel
+
+58:57.800 --> 59:01.100
+that is your entire application and then it switches
+
+59:01.100 --> 59:03.600
+between the different compute phases. We really
+
+59:03.600 --> 59:07.500
+need to expose first class reports that it in accelerators
+
+59:07.500 --> 59:13.200
+also need to ensure that their thread live up to the
+
+59:13.200 --> 59:18.500
+to the promise of being real threads. So that means
+
+59:18.500 --> 59:23.800
+that you need to conform to the de-facto memory model
+
+59:23.800 --> 59:26.100
+that everybody uses which of the C plus plus memory
+
+59:26.100 --> 59:31.900
+model and in the second thing is threads are should
+
+59:31.900 --> 59:35.800
+be able to access all objects in so that mean Things
+
+59:35.800 --> 59:40.400
+that you need to have some notion of unified and Global
+
+59:40.400 --> 59:45.700
+memory accelerators shouldn't be these these black
+
+59:45.700 --> 59:47.700
+boxes that have their own memory and they can't touch
+
+59:47.700 --> 59:54.200
+anything else memory system is time for one doing
+
+59:54.200 --> 59:58.400
+things. The one thing is the Confederate attitude
+
+59:58.400 --> 60:02.000
+towards just like I think one of the greatest things
+
+60:02.000 --> 60:05.800
+that nobody has done is transformed the people into
+
+60:05.800 --> 60:08.000
+when there is a programming problem performance
+
+60:08.000 --> 60:10.200
+problem, you build blame the programmer rather
+
+60:10.200 --> 60:13.900
+than the offenders about greatest achievement,
+
+60:13.900 --> 60:18.200
+I think but but you know, we spoke for Performance
+
+60:18.200 --> 60:21.500
+Horse these little things that come in the way our
+
+60:21.500 --> 60:24.900
+and therefore I'm a man. I feel like fighting a threat
+
+60:24.900 --> 60:27.900
+doesn't matter on what I interfered with on on the
+
+60:27.900 --> 60:30.600
+West Side. That's another thing that's controlling
+
+60:30.600 --> 60:34.100
+that whose side interference is another thing.
+
+60:34.100 --> 60:37.400
+That would be nice to have We have time for one more
+
+60:37.400 --> 60:40.100
+quick statement and then we have to stop because
+
+60:40.100 --> 60:46.800
+we are over time. I would say I'd say kuta graphs does
+
+60:46.800 --> 60:51.700
+address a lot of the scheduling has a long way to addressing
+
+60:51.700 --> 60:57.300
+a lot of the scheduling needs of AMT. And you're making
+
+60:57.300 --> 61:01.300
+it better. I think this was the last statement of
+
+61:01.300 --> 61:04.600
+our pain. So let us thank see panelist again for the
+
+61:04.600 --> 61:09.400
+nice airport and see presentations, and so we will
+
+61:09.400 --> 61:15.100
+start with the question that answers and yeah, please
+
+61:15.100 --> 61:18.400
+type your question in the chat so I can read them at
+
+61:18.400 --> 61:20.800
+our panelists can take your questions. Thank you.
+
+61:22.100 --> 61:23.300
+So he can pass again.
+
